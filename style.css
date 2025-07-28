@@ -1,225 +1,152 @@
-/* Corrected Google Font Import URL */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* style.css */
 
-:root {
-    /* Refined colors based on appscreens.com's aesthetic */
-    --primary-blue: #0070C7; /* A deep, rich blue */
-    --primary-blue-dark: #005A9C; /* Darker shade for hover */
-    --text-dark: #1A1A1A; /* Very dark grey for primary text */
-    --text-medium: #555555; /* Medium grey for secondary text/taglines */
-    --bg-light-grey: #F9F9FA; /* Very subtle off-white background - let's ensure it's picked up */
-    --bg-card-white: #FFFFFF; /* Pure white for content cards */
-    --border-light: #E0E0E0; /* Light grey for subtle borders */
-    --border-medium: #CCCCCC; /* Slightly darker grey for some borders */
-    --border-radius-card: 16px; /* More generous rounded corners for cards */
-    --border-radius-button: 12px; /* Rounded corners for buttons */
-    --shadow-subtle: rgba(0, 0, 0, 0.08); /* Soft shadow for cards */
-    --shadow-button: rgba(0, 0, 0, 0.15); /* More pronounced shadow for buttons */
-    --shadow-button-hover: rgba(0, 0, 0, 0.25); /* Even stronger shadow on hover */
+/* Base Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Base styles for body and typography */
+html {
+  font-size: 16px;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--bg-light-grey); /* Set background to the light grey variable */
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align content to the top */
-    min-height: 100vh;
-    box-sizing: border-box;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-/* Main container for the content card */
+/* Container */
 .container {
-    background-color: var(--bg-card-white); /* Pure white card background */
-    padding: 45px; /* Generous padding */
-    border-radius: var(--border-radius-card); /* Softly rounded corners */
-    box-shadow: 0 10px 30px var(--shadow-subtle); /* Deeper, subtle shadow */
-    border: 1px solid var(--border-light); /* Thin, light border */
-    max-width: 850px; /* Slightly wider max-width for content */
-    width: 100%;
-    margin-top: 50px; /* Space from the top of the viewport */
-    box-sizing: border-box;
-    overflow: hidden; /* Ensures shadows/borders are contained */
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
-/* Header styling */
-header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 15px; /* More space below header */
-    border-bottom: 1px solid var(--border-light); /* Subtle separator line */
+/* Hero / Header Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background: linear-gradient(135deg, #4a90e2, #37b9fb);
+  color: #fff;
+  text-align: center;
 }
 
-header h1 {
-    color: var(--text-dark); /* Dark text for main title */
-    font-size: 3.2em; /* Larger, more impactful title */
-    font-weight: 700; /* Bolder weight */
-    margin-bottom: 8px;
-    letter-spacing: -0.03em; /* Tighter letter spacing like appscreens.com */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.tagline {
-    font-size: 1.2em;
-    color: var(--text-medium); /* Medium grey for tagline */
-    margin-top: 0;
-    font-weight: 400;
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
-/* Section headings */
-section {
-    margin-bottom: 35px;
-    padding-top: 10px;
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ff9500;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-section h2 {
-    color: var(--text-dark); /* Darker heading for sections */
-    font-size: 2.2em; /* Good size for subheadings */
-    font-weight: 600;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border-light); /* Separator line */
+.btn-primary:hover {
+  background: #e08600;
 }
 
-/* Paragraph text */
-p {
-    margin-bottom: 18px;
-    font-size: 1.05em;
-    line-height: 1.7; /* Increased line height for readability */
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
 }
 
-/* General link styling */
-a {
-    color: var(--primary-blue);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease-in-out;
+.feature-item {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
-a:hover {
-    color: var(--primary-blue-dark);
-    text-decoration: underline;
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
-/* Button-like link styling (for email and privacy links) */
-.email a,
-.privacy-link a {
-    display: inline-block;
-    background-color: var(--primary-blue); /* Solid blue button background */
-    color: white;
-    padding: 16px 32px; /* Generous padding for a clickable area */
-    border-radius: var(--border-radius-button); /* Rounded corners for buttons */
-    margin-top: 20px; /* Space above buttons */
-    box-shadow: 0 6px 12px var(--shadow-button); /* Clean, strong shadow */
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.1s ease-out;
-    font-size: 1.1em;
-    font-weight: 600;
-    text-align: center;
-    border: none; /* No border for a clean look */
+.feature-item p {
+  font-size: 1rem;
+  color: #666;
 }
 
-.email a:hover,
-.privacy-link a:hover {
-    background-color: var(--primary-blue-dark); /* Darker blue on hover */
-    box-shadow: 0 8px 18px var(--shadow-button-hover); /* More pronounced shadow */
-    transform: translateY(-2px); /* Subtle lift effect */
-    text-decoration: none;
+/* Pricing Section */
+.pricing {
+  text-align: center;
+  padding: 4rem 0;
 }
 
-/* Specific styling for privacy-content for consistency */
-.privacy-content p {
-    font-size: 1.05em;
-    line-height: 1.7;
-    color: var(--text-dark);
+.plan {
+  display: inline-block;
+  width: 280px;
+  background: #fff;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Back to Support Page button */
-.back-link p {
-    text-align: center;
-    margin-top: 40px; /* More space before the back link section */
+.plan h4 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
 }
 
-.back-link p a {
-    background-color: var(--text-medium); /* A neutral grey button for "back" */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 12px 25px; /* Slightly less padding than primary buttons */
-    font-size: 1em;
-    border-radius: var(--border-radius-button); /* Apply button border radius */
-    border: none; /* Ensure no border */
+.plan p.price {
+  font-size: 2rem;
+  color: #4a90e2;
+  margin-bottom: 1rem;
 }
 
-.back-link p a:hover {
-    background-color: #4A4A4A; /* Darker grey on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+.plan ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
 }
 
-/* Footer styling */
+.plan ul li {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.plan .btn-primary {
+  width: 100%;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    margin-top: 60px; /* More space before footer */
-    font-size: 0.85em;
-    color: var(--text-medium);
-    padding-top: 25px;
-    border-top: 1px solid var(--border-light); /* Separator line for footer */
+  background: #222;
+  color: #bbb;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.875rem;
 }
 
-/* Responsive Design for smaller screens */
+/* Responsive tweaks */
 @media (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
-    .container {
-        padding: 30px;
-        margin-top: 30px;
-    }
-    header h1 {
-        font-size: 2.5em;
-    }
-    section h2 {
-        font-size: 1.8em;
-    }
-    p {
-        font-size: 0.95em;
-    }
-    .email a,
-    .privacy-link a,
-    .back-link p a {
-        padding: 14px 28px;
-        font-size: 1em;
-    }
-}
-
-/* Even smaller screens (mobile portrait) */
-@media (max-width: 480px) {
-    .container {
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 12px; /* Slightly less rounded on very small screens */
-    }
-    header h1 {
-        font-size: 2em;
-    }
-    .tagline {
-        font-size: 1.0em;
-    }
-    section h2 {
-        font-size: 1.6em;
-    }
-    p {
-        font-size: 0.9em;
-    }
-    .email a,
-    .privacy-link a,
-    .back-link p a {
-        padding: 10px 20px;
-        font-size: 0.9em;
-        display: block; /* Make buttons stack on small screens */
-        width: calc(100% - 40px); /* Adjust width for padding */
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .plan {
+    width: auto;
+    margin: 1rem;
+  }
 }
