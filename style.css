@@ -1,115 +1,147 @@
 /* Import Google Font - Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #4A90E2; /* A blue shade for accents */
-    --text-color: #333;
-    --secondary-text-color: #666;
-    --background-color: #f0f2f5; /* Light grey background */
-    --card-background: #ffffff; /* White for content cards */
-    --border-radius: 12px;
-    --shadow-light: rgba(0, 0, 0, 0.1);
-    --shadow-medium: rgba(0, 0, 0, 0.05);
+    /* Define colors based on appscreens.com's clean, modern aesthetic */
+    --primary-color: #007AFF; /* A vibrant iOS-like blue for accents/buttons */
+    --text-color: #1A1A1A; /* Very dark grey for primary text */
+    --secondary-text-color: #666666; /* Medium grey for secondary text/taglines */
+    --light-grey-background: #F8F8F8; /* A very light, almost white background */
+    --card-background: #FFFFFF; /* Pure white for content cards */
+    --border-color: #E0E0E0; /* Light grey for subtle borders */
+    --border-radius: 14px; /* Slightly more rounded corners for modern feel */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* More noticeable but still soft shadow */
+    --shadow-medium: rgba(0, 0, 0, 0.04);
 }
 
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--light-grey-background);
     margin: 0;
-    padding: 20px;
+    padding: 20px; /* Generous padding on the body */
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align content to the top */
+    align-items: center; /* Center content vertically */
     min-height: 100vh; /* Ensure it takes full viewport height */
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    box-sizing: border-box;
 }
 
 .container {
     background-color: var(--card-background);
-    padding: 30px;
+    padding: 40px; /* More generous padding inside the container */
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 15px var(--shadow-light);
+    box-shadow: 0 8px 25px var(--shadow-light); /* Deeper, softer shadow */
+    border: 1px solid var(--border-color); /* Subtle border like appscreens.com cards */
     max-width: 800px;
     width: 100%;
-    margin-top: 40px; /* Space from the top of the viewport */
+    margin: auto; /* Center horizontally if content is shorter than viewport */
     box-sizing: border-box;
+    overflow: hidden; /* Ensures shadows/borders are contained */
 }
 
 header {
     text-align: center;
     margin-bottom: 40px;
+    padding-bottom: 10px; /* Small padding at bottom */
+    /* No border-bottom here, rely on layout for separation */
 }
 
 header h1 {
-    color: var(--primary-color);
-    font-size: 2.5em;
-    font-weight: 600;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    color: var(--primary-color); /* Vibrant blue for main title */
+    font-size: 3em; /* Larger title */
+    font-weight: 700; /* Bolder */
+    margin-bottom: 8px;
+    letter-spacing: -0.02em; /* Slightly tighter letter spacing */
 }
 
 .tagline {
-    font-size: 1.1em;
+    font-size: 1.15em;
     color: var(--secondary-text-color);
     margin-top: 0;
+    font-weight: 400; /* Lighter weight for taglines */
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    padding-top: 10px; /* Space above each section */
 }
 
 section h2 {
-    color: var(--primary-color);
-    font-size: 1.8em;
+    color: var(--text-color); /* Darker heading for sections */
+    font-size: 2em; /* Good size for subheadings */
     font-weight: 600;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color); /* Subtle separator line */
 }
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 18px; /* Slightly more line spacing */
+    font-size: 1.05em; /* Slightly larger body text for readability */
 }
 
 a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #357ABD; /* Slightly darker shade on hover */
+    color: #0056b3; /* Slightly darker blue on hover */
     text-decoration: underline;
 }
 
+/* Style the email and privacy links as prominent buttons */
 .email a,
-.privacy-link a {
+.privacy-link a,
+.back-link p a { /* Also applies to the back button */
     display: inline-block;
     background-color: var(--primary-color);
     color: white;
-    padding: 10px 20px;
-    border-radius: var(--border-radius);
-    margin-top: 10px;
-    box-shadow: 0 2px 5px var(--shadow-medium);
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 14px 28px; /* More generous button padding */
+    border-radius: var(--border-radius); /* Use global border-radius */
+    margin-top: 15px; /* Space above buttons */
+    box-shadow: 0 4px 10px var(--shadow-medium); /* Soft shadow for buttons */
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.1s ease-out;
+    font-size: 1.05em;
+    font-weight: 600;
+    text-align: center;
 }
 
 .email a:hover,
-.privacy-link a:hover {
-    background-color: #357ABD;
-    box-shadow: 0 3px 8px var(--shadow-light);
+.privacy-link a:hover,
+.back-link p a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 15px var(--shadow-light); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
     text-decoration: none;
 }
 
 footer {
     text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
+    margin-top: 50px; /* More space before footer */
+    font-size: 0.85em;
     color: var(--secondary-text-color);
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color); /* Separator line for footer */
 }
+
+/* Specific styling for privacy-content for consistency */
+.privacy-content p {
+    font-size: 1em; /* Adjust privacy text font size */
+    line-height: 1.7; /* Good line height for readability */
+    color: var(--text-color);
+}
+
+/* Ensure back-link text is styled correctly */
+.back-link p {
+    text-align: center;
+    margin-top: 30px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -118,21 +150,46 @@ footer {
     }
 
     .container {
-        padding: 20px;
-        margin-top: 20px;
+        padding: 25px;
+        margin-top: 25px;
     }
 
     header h1 {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+
+    .tagline {
+        font-size: 1em;
     }
 
     section h2 {
-        font-size: 1.5em;
+        font-size: 1.7em;
+    }
+
+    p {
+        font-size: 0.95em;
     }
 
     .email a,
-    .privacy-link a {
-        padding: 8px 15px;
+    .privacy-link a,
+    .back-link p a {
+        padding: 12px 20px;
+        font-size: 0.95em;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    section h2 {
+        font-size: 1.4em;
+    }
+    p {
         font-size: 0.9em;
     }
 }
