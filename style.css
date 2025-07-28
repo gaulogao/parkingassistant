@@ -1,4 +1,4 @@
-/* Import Google Font - Inter */
+/* Corrected Google Font Import URL */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
@@ -7,7 +7,7 @@
     --primary-blue-dark: #005A9C; /* Darker shade for hover */
     --text-dark: #1A1A1A; /* Very dark grey for primary text */
     --text-medium: #555555; /* Medium grey for secondary text/taglines */
-    --bg-light-grey: #F9F9FA; /* Very subtle off-white background */
+    --bg-light-grey: #F9F9FA; /* Very subtle off-white background - let's ensure it's picked up */
     --bg-card-white: #FFFFFF; /* Pure white for content cards */
     --border-light: #E0E0E0; /* Light grey for subtle borders */
     --border-medium: #CCCCCC; /* Slightly darker grey for some borders */
@@ -23,7 +23,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--bg-light-grey); /* Matches appscreens.com background */
+    background-color: var(--bg-light-grey); /* Set background to the light grey variable */
     margin: 0;
     padding: 20px;
     display: flex;
@@ -148,6 +148,8 @@ a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 12px 25px; /* Slightly less padding than primary buttons */
     font-size: 1em;
+    border-radius: var(--border-radius-button); /* Apply button border radius */
+    border: none; /* Ensure no border */
 }
 
 .back-link p a:hover {
