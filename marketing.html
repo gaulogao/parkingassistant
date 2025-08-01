@@ -1,61 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking Sign Reader</title>
-    <link rel="stylesheet" href="style.css"> <!-- Reuses the same style2.css file -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parking Sign Reader</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    h1 {
+      color: #007BFF;
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #28a745;
+      margin-top: 30px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "✔";
+      color: #17a2b8;
+      margin-right: 10px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .features {
+      background-color: #e9f5ff;
+      padding: 20px;
+      border-left: 5px solid #007BFF;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+
+    .cta {
+      font-weight: bold;
+      color: #dc3545;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.2em;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>About Parking Sign Reader</h1>
-            <p class="tagline">Parking Sign Reader</p>
-        </header>
+  <div class="container">
+    <h1>Parking Sign Reader</h1>
+    <p><strong>Your Travel-Friendly Parking Sign Reader</strong></p>
+    <p>Park smarter wherever your journey takes you.</p>
 
-        <section class="privacy-content">
-            <p>
-              Parking Sign Reader – Your Travel-Friendly Parking Sign Reader Park smarter wherever your journey takes you.
+    <p>Whether you're road-tripping, exploring a new city, or renting a car abroad, Parking Sign Reader helps travelers avoid confusing parking signs and unexpected fines. Powered by advanced AI, the app analyzes signs from a simple photo and clearly tells you whether parking is allowed.</p>
 
-Whether you're road-tripping, exploring a new city, or renting a car abroad, Parking Sign Reader helps travelers avoid confusing parking signs and unexpected fines. 
-Powered by advanced AI, the app analyzes signs from a simple photo and clearly tells you whether parking is allowed.
+    <ul>
+      <li>Ideal for tourists, business travelers, and city-hoppers</li>
+      <li>Multilingual interface: English, French, Simplified Chinese, Traditional Chinese (HK), Arabic</li>
+      <li>AI understands most common languages</li>
+      <li>Clean and simple UI for hassle-free experience</li>
+    </ul>
 
-- Ideal for tourists, business travelers, and city-hoppers who want stress-free parking in unfamiliar neighborhoods
-
-- Multilingual interface in English, French, Simplified Chinese, Traditional Chinese (Hong Kong), and Arabic
-
-- AI understands most common languages, making it usable worldwide
-
-- Clean and simple UI for fast navigation and hassle-free experience on the move
-
-
-Key Features:
-
-- Smart photo analysis of parking signs
-
-- Clear answer: Can you park or not
-
-- Multilingual support and global language recognition
-
-- Sleek, minimalist interface for easy use
-
-- Designed with travelers in mind
-
-
-Snap a photo. Get clarity.
-
-Parking Sign Reader helps you decode local signage quickly—so you can move on with your journey.
-            </p>
-        </section>
-
-        <section class="back-link">
-            <p><a href="index.html">Back to Support Page</a></p>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Parking Sign Assistant. All rights reserved.</p>
-        </footer>
+    <div class="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Smart photo analysis of parking signs</li>
+        <li>Clear answer: Can you park or not</li>
+        <li>Multilingual support and global recognition</li>
+        <li>Sleek, minimalist interface</li>
+        <li>Designed with travelers in mind</li>
+      </ul>
     </div>
+
+    <div class="cta">
+      Snap a photo. Get clarity.
+    </div>
+
+    <p>Parking Sign Reader helps you decode local signage quickly—so you can move on with your journey.</p>
+  </div>
 </body>
 </html>
