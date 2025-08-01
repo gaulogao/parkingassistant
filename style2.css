@@ -1,0 +1,94 @@
+/* style2.css – Parking Sign Reader */
+
+/* Reset basic elements */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Header */
+h1 {
+  font-size: 2.2em;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #17a2b8;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 20px;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: url('checkmark.svg') no-repeat left center;
+  background-size: 20px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+/* Key Features section */
+.features {
+  background-color: #e9f7ef;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  border-radius: 5px;
+}
+
+/* Footer call-to-action */
+.call-to-action {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #dc3545;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  ul li {
+    padding-left: 25px;
+    background-size: 16px;
+  }
+}
